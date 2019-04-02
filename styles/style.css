@@ -2,8 +2,8 @@ body {
 	font-family: 'Muli', sans-serif;
 	margin: 0 ;
 	padding: 0;
-	background-color: white;
 	box-sizing: border-box;
+	background-color: mistyrose;
 	}
 
 h1 {
@@ -14,19 +14,21 @@ h1 {
 	}
 
 h2 {
-	font-size: 30px;
+	font-size: 2rem;
 	line-height: 1.4;
 	margin: 200px auto;
 	max-width: 30em;
+	color: lightgreen;
 	}
 
 h3 {
-	font-size: 20px;
+	font-size: 3rem;
 	line-height: 1.4;
 	text-transform: lowercase;
 	font-style: bold;
 	margin: 0;
 	padding-top: 20px;
+
 	}	
 
 p { 
@@ -37,18 +39,34 @@ p {
 	line-height: 1.4;
 	}
 
-.site-name {
-	font-weight: 700;
-	color: #063b6d;
-	}
 
-a { font-size: 20px;
+a { font-size: 1rem;
 	text-decoration: none;
-	font-weight: 700;
-	color: #063b6d;
+	font-weight: 400;
+	color: navy;
+	
 	}
 
-nav {
+.logo { font-weight: 700;
+	color: #063b6d;
+}
+
+.about {
+	float: right;
+}
+/*
+.row {
+	display: block;}
+
+
+.half {
+	float: left;
+	width: 49.99999%;
+}
+
+*/
+
+header {
 	box-sizing: border-box;
 	width: 100%;
 	background-color: rgba(255, 255, 255, 98%);
@@ -62,8 +80,7 @@ footer {
 	font-style: sans-serif;
 	margin: 0px;
 	padding: 100px;
-	background-color: gray;
-	color: white;
+	font-size: 0.8rem;
 	}
 
 .center {
@@ -122,3 +139,49 @@ footer {
 	top: 10vh;
 	padding: 20px 60px 20px 0px;
 	}
+
+* {
+  box-sizing: border-box;
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'left middle right'; 
+  grid-column-gap: 10px;
+} 
+
+.left,
+.middle,
+.right {
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+}
+
+/* Style the middle column */
+.middle {
+  grid-area: middle;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+}
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas:  
+      'left' 
+      'middle' 
+      'right';
+  }
+}
+

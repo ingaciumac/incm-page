@@ -1,96 +1,66 @@
 
-* {
-	box-sizing: border-box;
-	margin: 0;
-	font-family: Arial, Helvetica, sans-serif;
+/* 
+.cloud {
+	font-size: 1.25em;
+	color: mediumblue;
+	padding: 5px 10px;
+	display: inline-block;
+	border-radius: 7px;
+	position: absolute;
+	
 }
 
-
-h1, h2, h3 {
-	text-align: center;
+.pink {
+	top: -120px;
+	left: 100px;
+	background-color: pink;
 }
 
-h1 {
-	padding-top: 40vh;
-	font-size: 2.5em;
+.blue {
+	bottom: -100px;
+	left: -50px;
+	background-color: skyblue;
 }
 
-h2 {
-	padding-bottom: 50px;
+.orange {
+	top: -60px;
+	right: -100px;
+	background-color: peachpuff;
 }
 
-h3 {
-	text-transform: uppercase;
-	padding-bottom: 50px;
-	font-weight: normal;
-	color: coral;
-}
-p {
-	font-size: 1.3em;
-	line-height: 1.5em;
-	padding-bottom: 150px;
+.green {
+	top: -150px;
+	right: 300px;
+	background-color: palegreen;
 }
 
-nav {
-	width: 100vw;;
-	background-color: rgba(255, 255, 255, 1);
-	position: fixed;
-	top: 0px;
-	z-index: 1;
+.silver {
+	bottom: -150px;
+	right: 250px;
+	background-color: silver;
 }
+ */
 
-
-footer {
-	background-color: coral;
-	text-align: center;
-	padding: 10px;
-}
 
 .cover {
-	height: 100vh;
 	background-color: coral;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .services {
 	background-color: bisque;
-	padding: 100px;
-	min-height: 100vh;
+	padding: 100px 0;
 }
 
 .contact {
 	background-color: darkkhaki;
-	height: 100vh;
-	padding: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.container {
-	margin: 0 auto;
-	width: 60vw;
-	height: auto;
-	position: relative;
-}
-
-.menu {
-	float: right;
-	padding: 20px;
-	color: black;
-	font-weight: bold;
-}
-.menu:hover {
-	color: orangered;
-}
-a {
-	text-decoration: none;
-	color: springgreen;
-}
-
-#logo {
-	float: left;
-	padding: 20px;
-	color: orangered;
-	font-weight: bold;
-}
-
-#logo:hover {
-	color: black;
+.service {
+	padding: 100px 0;
 }

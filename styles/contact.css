@@ -1,0 +1,14 @@
+.contact {
+	background-color: darkkhaki;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	margin: 0 auto;
+	width: 60vw;
+	height: auto;
+	position: relative;
+}

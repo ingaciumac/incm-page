@@ -1,22 +1,17 @@
 img {
-	width: 60%;
-	height: 100%;
+	width: 100%;
+	max-height: 500px;
 	display: block;
-	object-fit: cover;
+	object-fit: contain;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 30px;
 }
 
-.content-section {
-	margin: 50px 0;
-	min-height: 100vh;
-}
+/* .container {
+	background-color: skyblue;
+} */
 
-.container {
-	background-color: thistle;
-	margin: 2px auto;
-	width: 60vw;
-	height: auto;
-	position: relative;
+.project {
 	padding: 50px 0;
 }

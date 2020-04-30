@@ -38,7 +38,7 @@ nav {
 	padding: 0 5vw;
 }
 
-.menu {
+.menu, .hamburger {
 	float: right;
 	padding: 20px;
 	color: black;
@@ -60,7 +60,53 @@ nav {
 	color: black;
 }
 
+
+.pop-up-menu {
+	
+	background-color: orange;
+	width: 80vw;
+	height: 100vh;
+	display: flex;
+	display: none;
+	right: 0;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	z-index: 2;
+}
+
+
+.menu-vertical {
+	text-align: ;
+	color: black;
+	font-weight: bold;
+	display: block;
+}
+
+/* Responsive layouts */
+
+@media screen and (max-width: 770px) {
+	.menu {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 770px) {
+	.hamburger {
+		display: none;
+	}
+	.pop-up-menu {
+		display: none;
+	}
+}
+
+
+
 /* Top navigation bar styles end here*/
+
+
+
 
 footer {
 	background-color: white;
@@ -78,3 +124,5 @@ footer {
 	width: 60vw;
 	position: relative;
 }
+
+

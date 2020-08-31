@@ -1,74 +1,4 @@
 
-/* 
-.cloud {
-	font-size: 1.25em;
-	color: mediumblue;
-	padding: 5px 10px;
-	display: inline-block;
-	border-radius: 7px;
-	position: absolute;
-	
-}
-
-.pink {
-	top: -120px;
-	left: 100px;
-	background-color: pink;
-}
-
-.blue {
-	bottom: -100px;
-	left: -50px;
-	background-color: skyblue;
-}
-
-.orange {
-	top: -60px;
-	right: -100px;
-	background-color: peachpuff;
-}
-
-.green {
-	top: -150px;
-	right: 300px;
-	background-color: palegreen;
-}
-
-.silver {
-	bottom: -150px;
-	right: 250px;
-	background-color: silver;
-}
- */
-
-/* 
-h1, h2, h3 {
-	text-align: center;
-}
-.cover {
-	background-color: coral;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.services {
-	background-color: bisque;
-	padding: 100px 0;
-}
-
-.contact {
-	
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 85vh;
-}
-
-.service {
-	padding: 100px 0;
-} */
-
 img {
 	width: 100%;
 	max-height: 500px;
@@ -78,10 +8,6 @@ img {
 	margin-right: auto;
 	margin-bottom: 30px;
 }
-
-/* .container {
-	background-color: skyblue;
-} */
 
 
 .project {

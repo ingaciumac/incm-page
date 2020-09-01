@@ -75,11 +75,12 @@ u {
 @media screen and (min-width: 1440px) {
 	.container {	
 		width: 50vw;
+	}
 		p {
 			font-size: 22px;
 		}
 	}
-}
+
 
 @media screen and (max-width: 1000px) {
 	.container {	

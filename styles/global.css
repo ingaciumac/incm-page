@@ -25,6 +25,27 @@ a {
 	color: #0a43ac;
 }
 
+.karma {
+	text-decoration: none;
+	color: #ff70db;
+}
+.medium {
+	text-decoration: none;
+	color: #b40e61;
+}
+.insta {
+	text-decoration: none;
+	color: #6b0aac;
+}
+.behance{
+	text-decoration: none;
+	color: #0a43ac;
+}
+.linkedin{
+	text-decoration: none;
+	color: #045381;
+}
+
 /* Top navigation bar styles start here*/
 
 nav {
@@ -35,7 +56,7 @@ nav {
 	z-index: 1;
 	display: block;
 	margin: 0 auto;
-	padding: 0 5vw;
+	padding: 0 ;
 }
 
 .menu, .hamburger {
@@ -84,9 +105,10 @@ nav {
 
 footer {
 	background-color: white;
-	text-align: center;
+	text-align: left;
 	padding-top: 10px;
 	padding-bottom: 20px;
+	padding-left: 20px;
 }
 
 .section {
@@ -95,7 +117,7 @@ footer {
 
 .container {
 	margin: 150px auto;
-	width: 50vw;
+	width: 60vw;
 	position: relative;
 }
 

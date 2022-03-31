@@ -28,18 +28,6 @@ iframe {text-decoration: none;
 	color: #2e59aa;
 }
 
-.tiptext {
-    color:#069; 
-    cursor:pointer;
-}
-.description {
-    display:none;
-    position:absolute;
-    border:1px solid #000;
-    width:400px;
-    height:400px;
-}
-
 /* Top navigation bar styles start here*/
 
 nav {
@@ -113,3 +101,8 @@ footer {
 	width: 50vw;
 	position: relative;
 }
+
+@media only screen and (max-width: 600px) {
+	.container {
+		width: 80vw;
+	}

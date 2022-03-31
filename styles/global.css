@@ -24,9 +24,6 @@ a {
 	text-decoration: none;
 	color: #0a43ac;
 }
-iframe {text-decoration: none;
-	color: #2e59aa;
-}
 
 /* Top navigation bar styles start here*/
 
@@ -37,7 +34,7 @@ nav {
 	top: 0px;
 	z-index: 1;
 	display: block;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0 5vw;
 }
 
@@ -93,16 +90,18 @@ footer {
 }
 
 .section {
-	min-height: 100vh;
+	min-height: 70vh;
 }
 
 .container {
-	margin: 50px auto;
+	margin: 150px auto;
 	width: 50vw;
 	position: relative;
 }
 
 @media only screen and (max-width: 600px) {
 	.container {
+		margin: 100px auto;
 		width: 80vw;
+		position: relative;
 	}

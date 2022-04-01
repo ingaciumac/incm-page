@@ -131,5 +131,9 @@ footer {
 	.container {
 		margin: 100px auto;
 		width: 80vw;
-		position: relative;
+		position: relative;}
+	
+		p {
+			font-size: 1.2em;
+			line-height: 1.35em;}
 	}

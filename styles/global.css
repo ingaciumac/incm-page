@@ -1,8 +1,9 @@
 * {
 	box-sizing: border-box;
 	margin: 0;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Inter', Arial, Helvetica, sans-serif;
 	color: black;
+	
 }
 
 h1 {
@@ -30,6 +31,10 @@ a {
 	text-decoration: none;
 	color: #0a43ac;
 }
+.EE {
+	text-decoration: none;
+	color: #05DBCA;
+}
 
 .karma {
 	text-decoration: none;
@@ -55,14 +60,14 @@ a {
 /* Top navigation bar styles start here*/
 
 nav {
-	width: 100vw;
+	width: 95vw;
 	background-color: white;
 	position: fixed;
 	top: 0px;
 	z-index: 1;
 	display: block;
 	margin: 0 auto;
-	padding: 0 ;
+	padding: 30px 0px ;
 }
 
 .menu, .hamburger {
@@ -78,7 +83,7 @@ nav {
 }
 
 #logo {
-	padding: 30px;
+	padding: 0px;
 	float: left;
 	color: orangered;
 	font-weight: bold;
@@ -111,10 +116,10 @@ nav {
 
 footer {
 	background-color: white;
+	margin: 0px auto;
 	text-align: left;
-	padding-top: 10px;
-	padding-bottom: 20px;
-	padding-left: 30px;
+	width: 95vw;
+	position: relative;
 }
 
 .section {
@@ -132,8 +137,13 @@ footer {
 		margin: 100px auto;
 		width: 80vw;
 		position: relative;}
-	
-		p {
-			font-size: 1.2em;
-			line-height: 1.35em;}
+	p {
+		font-size: 1.2em;
+		line-height: 1.35em;}
+	footer {
+		background-color: white;
+		margin: 0px auto;
+		text-align: left;
+		width: 80vw;
+		position: relative;
 	}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carousel Interaction</title>
+<style>
+  .container {
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+    margin: auto;
+  }
+
+  .main-image-container {
+    width: 100%;
+    margin: 20px auto; /* Centering the main image */
+  }
+
+  .main-image {
+    width: 100%;
+    display: block; /* Remove bottom space */
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+  }
+
+  .carousel-container {
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Ensures thumbnails stay in one line */
+    margin-top: 10px;
+  }
+
+  .thumbnail {
+    width: 20%;
+    display: inline-block; /* Align thumbnails in a row */
+    margin-right: 10px;
+    box-sizing: border-box;
+  }
+
+  .thumbnail img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 3px solid transparent; /* Transparent border to avoid shifting */
+    cursor: pointer;
+  }
+
+  .thumbnail img.selected {
+    border-color: black;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="main-image-container">
+    <img id="mainImage" src="images/3.jpg" alt="Main Image" class="main-image">
+  </div>
+  <div class="carousel-container">
+    <!-- Thumbnails -->
+    <div class="thumbnail">
+      <img src="images/3.jpg" alt="Thumbnail 1" class="selected" onclick="changeMainImage('images/3.jpg', this)">
+    </div>
+	<div class="thumbnail">
+		<img src="images/4.jpg" alt="Thumbnail 1" class="selected" onclick="changeMainImage('images/4.jpg', this)">
+	  </div>
+	  <div class="thumbnail">
+		<img src="images/5.png" alt="Thumbnail 1" class="selected" onclick="changeMainImage('images/5.png', this)">
+	  </div>
+	  <div class="thumbnail">
+		<img src="images/5.png" alt="Thumbnail 1" class="selected" onclick="changeMainImage('images/5.png', this)">
+	  </div>
+	  <div class="thumbnail">
+		<img src="images/5.png" alt="Thumbnail 1" class="selected" onclick="changeMainImage('images/5.png', this)">
+	  </div>
+	  <div class="thumbnail">
+		<img src="images/5.png" alt="Thumbnail 1" class="selected" onclick="changeMainImage('images/5.png', this)">
+	  </div>
+    <!-- Repeat for other thumbnails -->
+  </div>
+</div>
+
+<script>
+  function changeMainImage(src, element) {
+    // Change the main image
+    document.getElementById('mainImage').src = src;
+
+    // Update the selected state for thumbnails
+    var thumbnails = document.querySelectorAll('.thumbnail img');
+    thumbnails.forEach(function(thumbnail) {
+      thumbnail.classList.remove('selected');
+    });
+    element.classList.add('selected');
+  }
+
+  // Call this function to initialize the first image as selected
+  changeMainImage('images/3.jpg', document.querySelector('.thumbnail img'));
+</script>
+
+</body>
+</html>

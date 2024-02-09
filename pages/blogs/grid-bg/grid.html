@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Image Grid</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  *, *::before, *::after {
+  box-sizing: inherit;
+}
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+    padding: 1em;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  @media (min-width: 601px) {
+    .gallery {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  @media (min-width: 841px) {
+    .gallery {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="gallery">
+  <!-- Repeat the following line for each image -->
+  <img src="images/1.PNG" alt="Gallery image">
+  <img src="images/1.PNG" alt="Gallery image">
+  <img src="images/1.PNG" alt="Gallery image">
+  <img src="images/1.PNG" alt="Gallery image">
+  <img src="images/1.PNG" alt="Gallery image">
+  <img src="images/1.PNG" alt="Gallery image">
+  <!-- ... (add more images as needed) ... -->
+  <img src="images/1.PNG" alt="Gallery image">
+  <img src="images/1.PNG" alt="Gallery image">
+  <img src="images/1.PNG" alt="Gallery image">
+  <img src="images/1.PNG" alt="Gallery image">
+  <img src="images/1.PNG" alt="Gallery image">
+  <img src="images/1.PNG" alt="Gallery image">
+</div>
+
+</body>
+</html>

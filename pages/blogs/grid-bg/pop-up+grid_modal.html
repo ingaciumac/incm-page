@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>in cm</title>
+	<!-- <link rel="icon" href="images/icon.png"> -->
+	<link rel="stylesheet" type="text/css" href="styles/global.css">
+	<link rel="stylesheet" type="text/css" href="styles/home.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="js/external/fa-a076d05399.js"></script>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+		</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+	box-sizing: border-box;
+	margin: 0;
+	font-family: 'Inter', Arial, Helvetica, sans-serif;
+	color: black;
+	
+}
+
+h1 {
+	font-size: 2.5em;
+	font-family: 'Inter', sans-serif;
+	font-weight: 700;
+}
+
+h3 {
+	text-transform: uppercase;
+	font-weight: normal;
+	color: coral;
+}
+
+p {
+	font-size: 1.5em;
+	line-height: 1.5em;
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+}
+
+a {
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+	text-decoration: none;
+	color: #0a43ac;
+}
+.eeapp {
+	text-decoration: none;
+	color: #05DBCA;
+}
+
+.karma {
+	text-decoration: none;
+	color: #ff70db;
+}
+.medium {
+	text-decoration: none;
+	color: #b40e61;
+}
+.insta {
+	text-decoration: none;
+	color: #6b0aac;
+}
+.behance{
+	text-decoration: none;
+	color: #0a43ac;
+}
+.linkedin{
+	text-decoration: none;
+	color: #045381;
+}
+
+  /* Overlay style */
+  .overlay {
+    display: block; /* Show overlay by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+    z-index: 5; /* High z-index to be on top */
+  }
+
+  /* Pop-up banner style */
+  .popup-banner {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 6; /* Above overlay */
+  }
+
+  /* Close button style */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  /* Full-width banner style for after closing the pop-up */
+  .banner-bottom {
+    display: none; /* Hidden by default */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px -8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 6; /* Above content */
+  }
+
+  /* Responsive width adjustments */
+  @media (min-width: 801px) {
+    .popup-banner {
+      width: 50%;
+    }
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+    padding: 1em;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    cursor: pointer; /* Indicates the image is clickable */
+  }
+
+  @media (min-width: 601px) {
+    .gallery {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  @media (min-width: 841px) {
+    .gallery {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+
+  /* Modal styles */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content Box */
+  .modal-content {
+    background-color: #fefefe;
+    
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 800px; /* Maximum width */
+  }
+
+/* ... Existing styles ... */
+
+/* Fullscreen Modal Style for small devices */
+@media (max-width: 800px) {
+  .modal-content {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: none;
+    border-radius: 0; /* Optional: Remove border radius if any */
+    overflow-y: auto; /* Enable vertical scrolling within the modal content */
+    box-sizing: border-box; /* Include padding and borders in the width and height */
+  }
+
+  .close {
+    position: sticky;
+    top: 0;
+    background: #fefefe;
+    padding: 10px;
+    margin: 0;
+    border: none;
+    z-index: 2; /* Ensure the close button is above other content */
+  }
+
+  .modal-img, .carousel-container, .description {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* Fixed Modal Style for wider devices */
+@media (min-width: 801px) {
+  .modal-content {
+    width: 800px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto; /* Enable vertical scrolling within the modal content */
+    box-sizing: border-box; /* Include padding and borders in the width and height */
+  }
+
+  .close {
+    position: sticky;
+    top: 0;
+    background: #fefefe;
+    padding: 10px;
+    margin: 0;
+    border: none;
+    z-index: 2; /* Ensure the close button is above other content */
+  }
+}
+
+/* ... The rest of your existing CSS ... */
+
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Modal Image */
+  .modal-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  /* Project Description */
+  .description {
+    margin-top: 20px;
+  }
+
+
+  .container {
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+    margin: auto;
+  }
+
+  .main-image-container {
+    width: 100%;
+    margin: 20px auto; /* Centering the main image */
+  }
+
+  .main-image {
+    width: 100%;
+    display: block; /* Remove bottom space */
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+  }
+
+  .carousel-container {
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Ensures thumbnails stay in one line */
+    margin-top: 10px;
+  }
+
+  .thumbnail {
+    width: 20%;
+    display: inline-block; /* Align thumbnails in a row */
+    margin-right: 10px;
+    box-sizing: border-box;
+  }
+
+  .thumbnail img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 3px solid transparent; /* Transparent border to avoid shifting */
+    cursor: pointer;
+  }
+
+  .thumbnail img.selected {
+    border-color: black;
+  }
+</style>
+</head>
+<body>
+
+
+<!-- Overlay -->
+<div id="pageOverlay" class="overlay"></div>
+
+<!-- Pop-up banner -->
+<div id="popupBanner" class="popup-banner">
+	<h1>Hi!</h1>
+	<p style="padding: 10px 0px;">My name is Inga. I am a product designer based in London. </p> 
+	<p style="padding: 10px 0px;">Currently I am working at BT, on the new <a class="eeapp" href="https://apps.apple.com/gb/app/my-ee/id567457151" target="_blank">EE app</a> shop experience.
+	</p>
+	
+	<p style="padding: 10px 0px;">You can also take a look at my app design for <a class="karma" href="https://www.figma.com/proto/0m8J8jZkfz4N2iWHLBDV7R/New-Karma-App-(Copy)?page-id=1516%3A10815&node-id=1572%3A35&viewport=334%2C48%2C0.18&scaling=scale-down&starting-point-node-id=1572%3A35." target="_blank">Karma</a> food. Read my latest blog post about brands on <a class="medium" href="https://uxdesign.cc/all-logos-look-the-same-b776e5c77b6f" target="_blank">Medium</a> or take a glance at how I am having fun with design in my spare time <a class="insta" href="https://www.instagram.com/p/CHJOC01DUAC/" target="_blank">here</a>.
+	</p>
+	<p style="padding: 10px 0px;">My old graphic design portfolio is on <a class="behance" href="https://www.behance.net/ingaciumac" target="_blank">Behance</a>. For more information visit <a class="linkedin" href="https://www.linkedin.com/in/inga-ciumac-93331114a/" target="_blank">LinkedIn</a>.
+	</p>
+  <span class="close-btn" onclick="closePopupBanner()">X</span>
+</div>
+
+<!-- Bottom banner -->
+<div id="bottomBanner" class="banner-bottom">
+	<a href="mailto:inga.ciumac@gmail.com?Subject=Hi!" target="_top">inga.ciumac@gmail.com</a>, 
+	<a class="behance" href="https://www.behance.net/ingaciumac" target="_blank">Behance</a>, 
+	<a class="linkedin" href="https://www.linkedin.com/in/inga-ciumac-93331114a/" target="_blank">LinkedIn</a>.
+	
+</div>
+
+<script>
+function closePopupBanner() {
+  // Hide the pop-up banner and overlay
+  document.getElementById('popupBanner').style.display = 'none';
+  document.getElementById('pageOverlay').style.display = 'none';
+
+  // Show the full-width banner at the bottom of the page
+  document.getElementById('bottomBanner').style.display = 'block';
+}
+</script>
+
+
+
+<div class="gallery">
+  <!-- Repeat the following line for each image -->
+  <!-- ... (add more images as needed) ... -->
+  <!-- Use a loop or manually add the onclick event for each image -->
+  <img src="images/1.PNG" alt="Gallery image" onclick="openModal()">
+  <img src="images/1.PNG" alt="Gallery image" onclick="openModal()">
+  <img src="images/1.PNG" alt="Gallery image" onclick="openModal()">
+  <img src="images/1.PNG" alt="Gallery image" onclick="openModal()">
+  <img src="images/1.PNG" alt="Gallery image" onclick="openModal()">
+  <img src="images/1.PNG" alt="Gallery image" onclick="openModal()">
+  <img src="images/1.PNG" alt="Gallery image" onclick="openModal()">
+  <img src="images/1.PNG" alt="Gallery image" onclick="openModal()">
+  <img src="images/1.PNG" alt="Gallery image" onclick="openModal()">
+  <img src="images/1.PNG" alt="Gallery image" onclick="openModal()">
+  <img src="images/1.PNG" alt="Gallery image" onclick="openModal()">
+  <img src="images/1.PNG" alt="Gallery image" onclick="openModal()">
+  <img src="images/1.PNG" alt="Gallery image" onclick="openModal()">
+  <img src="images/1.PNG" alt="Gallery image" onclick="openModal()">
+  <img src="images/1.PNG" alt="Gallery image" onclick="openModal()">
+  <!-- ... -->
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+	<div class="container">
+		<div class="main-image-container">
+		  <img id="mainImage" src="images/3.jpg" alt="Main Image" class="main-image">
+		</div>
+		<div class="carousel-container">
+		  <!-- Thumbnails -->
+		  <div class="thumbnail">
+			<img src="images/3.jpg" alt="Thumbnail 1" class="selected" onclick="changeMainImage('images/3.jpg', this)">
+		  </div>
+		  <div class="thumbnail">
+			  <img src="images/4.jpg" alt="Thumbnail 1" class="selected" onclick="changeMainImage('images/4.jpg', this)">
+			</div>
+			<div class="thumbnail">
+			  <img src="images/5.png" alt="Thumbnail 1" class="selected" onclick="changeMainImage('images/5.png', this)">
+			</div>
+			<div class="thumbnail">
+			  <img src="images/5.png" alt="Thumbnail 1" class="selected" onclick="changeMainImage('images/5.png', this)">
+			</div>
+			<div class="thumbnail">
+			  <img src="images/5.png" alt="Thumbnail 1" class="selected" onclick="changeMainImage('images/5.png', this)">
+			</div>
+			<div class="thumbnail">
+			  <img src="images/5.png" alt="Thumbnail 1" class="selected" onclick="changeMainImage('images/5.png', this)">
+			</div>
+		  <!-- Repeat for other thumbnails -->
+		</div>
+	  </div>
+    <div class="description">
+      Project description
+    </div>
+	<div class="description">
+		
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius erat eget orci accumsan, a lobortis quam mollis. Quisque elementum luctus urna sed pharetra. Pellentesque vehicula non magna vel ultrices. Nullam pellentesque semper tincidunt. Sed nibh tortor, mollis vitae semper faucibus, laoreet vitae odio. Duis lobortis malesuada lacus et mollis. Nullam blandit sed arcu vel faucibus. Pellentesque quis ipsum eget tellus gravida laoreet. Donec dictum facilisis nibh vel auctor. Aenean consectetur augue ut urna tincidunt, quis ultrices ex pretium.</br></br>
+Pellentesque quis fermentum enim. Phasellus blandit nunc erat, in lobortis tellus mollis quis. Quisque at ex sit amet dolor porta consequat. Nam eleifend at erat vitae scelerisque. Maecenas libero est, aliquet sit amet dictum id, bibendum a purus. In hac habitasse platea dictumst. Morbi mauris sem, rhoncus vitae justo efficitur, eleifend blandit sem. Quisque a porttitor enim. Donec congue ac diam et feugiat. Fusce tincidunt velit quis urna egestas fermentum sit amet volutpat lorem. Donec blandit vel lectus sit amet maximus. Integer non fringilla erat, a porta felis. Mauris semper non magna sit amet consectetur. Cras lacinia pretium ultrices.
+</br></br>
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc a nulla a orci imperdiet feugiat. Sed vel erat a elit luctus dapibus quis eget est. Maecenas ac arcu neque. Aenean at tempus ante. Fusce interdum finibus lacinia. Aenean ullamcorper pellentesque iaculis. Etiam pretium sapien auctor augue ornare, vel egestas mi vulputate. Nullam quis porttitor eros, nec mattis nibh. Ut facilisis aliquet augue quis fermentum. Aliquam non metus mauris. Maecenas vestibulum nec ipsum vitae tempus. Maecenas semper aliquam ultricies. Sed et nisi lorem. Ut blandit lacus nec pulvinar viverra.
+	  </div>
+  </div>
+
+
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Function to open the modal
+function openModal() {
+  modal.style.display = "block";
+}
+
+// Function to close the modal
+function closeModal() {
+  modal.style.display = "none";
+}
+
+// Close the modal if the user clicks anywhere outside of the modal content
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<script>
+	function changeMainImage(src, element) {
+	  // Change the main image
+	  document.getElementById('mainImage').src = src;
+  
+	  // Update the selected state for thumbnails
+	  var thumbnails = document.querySelectorAll('.thumbnail img');
+	  thumbnails.forEach(function(thumbnail) {
+		thumbnail.classList.remove('selected');
+	  });
+	  element.classList.add('selected');
+	}
+  
+	// Call this function to initialize the first image as selected
+	changeMainImage('images/3.jpg', document.querySelector('.thumbnail img'));
+  </script>
+
+</body>
+</html>

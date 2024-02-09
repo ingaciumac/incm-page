@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Page with Pop-up Banner</title>
+<style>
+  /* Overlay style */
+  .overlay {
+    display: block; /* Show overlay by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+    z-index: 1000; /* High z-index to be on top */
+  }
+
+  /* Pop-up banner style */
+  .popup-banner {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1001; /* Above overlay */
+  }
+
+  /* Close button style */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  /* Full-width banner style for after closing the pop-up */
+  .banner-bottom {
+    display: none; /* Hidden by default */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px -8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1001; /* Above content */
+  }
+
+  /* Responsive width adjustments */
+  @media (min-width: 801px) {
+    .popup-banner {
+      width: 50%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Overlay -->
+<div id="pageOverlay" class="overlay"></div>
+
+<!-- Pop-up banner -->
+<div id="popupBanner" class="popup-banner">
+  Hello world! Text 1
+  <span class="close-btn" onclick="closePopupBanner()">X</span>
+</div>
+
+<!-- Bottom banner -->
+<div id="bottomBanner" class="banner-bottom">
+  Hello world! Text 2
+</div>
+
+<script>
+function closePopupBanner() {
+  // Hide the pop-up banner and overlay
+  document.getElementById('popupBanner').style.display = 'none';
+  document.getElementById('pageOverlay').style.display = 'none';
+
+  // Show the full-width banner at the bottom of the page
+  document.getElementById('bottomBanner').style.display = 'block';
+}
+</script>
+
+</body>
+</html>

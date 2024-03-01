@@ -368,6 +368,7 @@ function closePopupBanner() {
   <!-- Repeat the following line for each image -->
   <!-- ... (add more images as needed) ... -->
   <!-- Use a loop or manually add the onclick event for each image -->
+  <a class="medium" href="../ee-launch/post.html" target="_blank"><img src="../ee-launch/images/ee-1.png" alt="Gallery image" ></a> 
   <a class="medium" href="https://uxdesign.cc/all-logos-look-the-same-b776e5c77b6f" target="_blank"><img src="images/cover.png" alt="Gallery image" ></a>  
   <a class="medium" href="https://www.behance.net/gallery/121105593/Karma-App" target="_blank"><img src="images/karma-app.png" alt="Gallery image" ></a> 
   <a class="medium" href="https://www.behance.net/gallery/121105777/Karma-Visual-Identity" target="_blank"><img src="images/karma-brand.png" alt="Gallery image" ></a> 
@@ -377,10 +378,9 @@ function closePopupBanner() {
   <a class="medium" href="https://www.behance.net/gallery/57095715/Animest-e-traditie" target="_blank"><img src="images/animest.png" alt="Gallery image" ></a> 
   <a class="medium" href="https://www.behance.net/gallery/57402561/Chisinau-580-years-packaging" target="_blank"><img src="images/chisinau.png" alt="Gallery image" ></a> 
   <a class="medium" href="../151101-santa/post.html" target="_blank"><img src="../151101-santa/images/2.PNG" alt="Gallery image" ></a>  
-  <a class="medium" href="../ee-launch/post.html" target="_blank"><img src="../ee-launch/images/ee-1.png" alt="Gallery image" ></a> 
   <img src="images/covid.png" alt="Gallery image" onclick="openModal()">
   <img src="images/cowsay.png" alt="Gallery image" onclick="openModal()">
-  <img src="images/tube.png" alt="Gallery image" onclick="openModal()">
+  <img src="images/tube.png" alt="Gallery image" onclick="openModal(2)">
   <img src="images/1.PNG" alt="Gallery image" onclick="openModal()">
   <img src="images/1.PNG" alt="Gallery image" onclick="openModal()">
   <img src="images/1.PNG" alt="Gallery image" onclick="openModal()">
@@ -401,7 +401,7 @@ function closePopupBanner() {
 
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
+    <span class="close" onclick="closeModal(2)">&times;</span>
 	<div class="container">
 		<div class="main-image-container">
 		  <img id="mainImage" src="images/tube.png" alt="Main Image" class="main-image">

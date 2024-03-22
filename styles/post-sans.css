@@ -1,4 +1,6 @@
 h1 {
+	margin-left: 20%;
+	margin-right: 20%; 
 	padding-top: 30px;
 	padding-bottom: 20px;
 	text-align: left;
@@ -12,8 +14,8 @@ h1 {
 }
 
 h2 {
-	margin-left: 30%;
-	margin-right: 30%; 
+	margin-left: 20%;
+	margin-right: 20%; 
 	color: #3f3f3f;
 	font-size: 20px;
 	line-height: 1.6;
@@ -66,8 +68,8 @@ u {
 
 @media screen and (min-width: 1440px) {
 	p {	
-		margin-left: 30%;
-		margin-right: 30%;
+		margin-left: 20%;
+		margin-right: 20%;
 	}
 }
 

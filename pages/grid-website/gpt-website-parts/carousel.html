@@ -53,27 +53,27 @@
 
 <div class="container">
   <div class="main-image-container">
-    <img id="mainImage" src="images/3.jpg" alt="Main Image" class="main-image">
+    <img id="mainImage" src="../images/4.jpg" alt="Main Image" class="main-image">
   </div>
   <div class="carousel-container">
     <!-- Thumbnails -->
     <div class="thumbnail">
-      <img src="images/3.jpg" alt="Thumbnail 1" class="selected" onclick="changeMainImage('images/3.jpg', this)">
+      <img src="../images/4.jpg" alt="Thumbnail 1" class="selected" onclick="changeMainImage('../images/4.jpg', this)">
     </div>
 	<div class="thumbnail">
-		<img src="images/4.jpg" alt="Thumbnail 1" class="selected" onclick="changeMainImage('images/4.jpg', this)">
+		<img src="../images/3.jpg" alt="Thumbnail 1" class="selected" onclick="changeMainImage('../images/3.jpg', this)">
 	  </div>
 	  <div class="thumbnail">
-		<img src="images/5.png" alt="Thumbnail 1" class="selected" onclick="changeMainImage('images/5.png', this)">
+		<img src="../images/5.png" alt="Thumbnail 1" class="selected" onclick="changeMainImage('../images/5.png', this)">
 	  </div>
 	  <div class="thumbnail">
-		<img src="images/5.png" alt="Thumbnail 1" class="selected" onclick="changeMainImage('images/5.png', this)">
+		<img src="../images/5.png" alt="Thumbnail 1" class="selected" onclick="changeMainImage('../images/5.png', this)">
 	  </div>
 	  <div class="thumbnail">
-		<img src="images/5.png" alt="Thumbnail 1" class="selected" onclick="changeMainImage('images/5.png', this)">
+		<img src="../images/5.png" alt="Thumbnail 1" class="selected" onclick="changeMainImage('../images/5.png', this)">
 	  </div>
 	  <div class="thumbnail">
-		<img src="images/5.png" alt="Thumbnail 1" class="selected" onclick="changeMainImage('images/5.png', this)">
+		<img src="../images/5.png" alt="Thumbnail 1" class="selected" onclick="changeMainImage('../images/5.png', this)">
 	  </div>
     <!-- Repeat for other thumbnails -->
   </div>
@@ -93,7 +93,7 @@
   }
 
   // Call this function to initialize the first image as selected
-  changeMainImage('images/3.jpg', document.querySelector('.thumbnail img'));
+  changeMainImage('../images/4.jpg', document.querySelector('.thumbnail img'));
 </script>
 
 </body>

@@ -7,9 +7,12 @@
 }
 
 h1 {
-	font-size: 2.5em;
-	font-family: 'Inter', sans-serif;
-	font-weight: 700;
+	font-size: 1.5em;
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+	font-variation-settings:"slnt" 0;
 }
 
 h3 {
@@ -22,7 +25,11 @@ p {
 	font-size: 1.5em;
 	line-height: 1.5em;
 	font-family: 'Inter', sans-serif;
-	font-weight: 400;
+	font-optical-sizing: auto;
+	font-weight: 370;
+	font-style: normal;
+	font-variation-settings:"slnt" 0;
+	color: rgba(0,0,0,.90);
 }
 
 a {
@@ -33,12 +40,12 @@ a {
 }
 .eeapp {
 	text-decoration: none;
-	color: #05DBCA;
+	color: #109e92;
 }
 
 .karma {
 	text-decoration: none;
-	color: #ff70db;
+	color: #f55cb5;
 }
 .medium {
 	text-decoration: none;

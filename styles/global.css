@@ -10,9 +10,11 @@ h1 {
 	font-size: 1.5em;
 	font-family: "Inter", sans-serif;
 	font-optical-sizing: auto;
-	font-weight: 600;
+	font-weight: 650;
 	font-style: normal;
 	font-variation-settings:"slnt" 0;
+	color: rgba(0,0,0,.90);
+	padding-bottom: 20px;
 }
 
 h3 {
@@ -26,42 +28,85 @@ p {
 	line-height: 1.5em;
 	font-family: 'Inter', sans-serif;
 	font-optical-sizing: auto;
-	font-weight: 370;
+	font-weight: 385;
 	font-style: normal;
 	font-variation-settings:"slnt" 0;
 	color: rgba(0,0,0,.90);
+	padding-bottom: 20px;
 }
 
 a {
 	font-family: 'Inter', sans-serif;
-	font-weight: 500;
+	font-weight: 400;
 	text-decoration: none;
-	color: #0a43ac;
+	color: #0229d7;
 }
+
+.underline-ee-1 {
+	background-size: 1.5px 1em;
+	box-shadow:
+	inset 0 -0.15em #ebef01;
+	display: inline;
+}
+.underline-ee-2 {
+	background-size: 1.5px 1em;
+	box-shadow:
+	inset 0 -0.15em #03868f;
+	display: inline;
+}
+
+.underline-karma {
+	background-size: 1.5px 1em;
+	box-shadow:
+	inset 0 -0.15em #ff88e1;
+	display: inline;
+}
+
+.underline-behance {
+	background-size: 1.5px 1em;
+	box-shadow:
+	inset 0 -0.15em #0057ff;
+	display: inline;
+}
+
+.underline-linkedin {
+	background-size: 1.5px 1em;
+	box-shadow:
+	inset 0 -0.15em #0a66c2;
+	display: inline;
+}
+
 .eeapp {
 	text-decoration: none;
-	color: #109e92;
+	color: rgba(0,0,0,.90);
 }
 
 .karma {
 	text-decoration: none;
-	color: #f55cb5;
+	color: rgba(0,0,0,.90);
 }
 .medium {
 	text-decoration: none;
-	color: #b40e61;
+	color: #0229d7;
 }
 .insta {
 	text-decoration: none;
-	color: #6b0aac;
+	color: #0229d7;
 }
 .behance{
 	text-decoration: none;
-	color: #0a43ac;
+	color: rgba(0,0,0,.90);
 }
 .linkedin{
 	text-decoration: none;
-	color: #045381;
+	color: rgba(0,0,0,.90);
+}
+
+
+br {
+	display: block; /* makes it have a width */
+	content: ""; /* clears default height */
+	margin-top: 0px; /* change this to whatever height you want it */
 }
 
 /* Top navigation bar styles start here*/
@@ -146,8 +191,8 @@ footer {
 		width: 80vw;
 		position: relative;}
 	p {
-		font-size: 1.2em;
-		line-height: 1.35em;}
+		font-size: 1.1em;
+		line-height: 1.25em;}
 	footer {
 		background-color: white;
 		margin: 0px auto;

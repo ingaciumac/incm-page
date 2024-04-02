@@ -10,9 +10,9 @@
 
 h1 {
 	padding-top: 30px;
-	padding-bottom: 60px;
+	padding-bottom: 30px;
 	text-align: left;
-	font-size: 3em;
+	font-size: 2.5em;
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 700;
@@ -131,8 +131,8 @@ u {
 	p {
 		font-size: 1.3em;
 	}
-	
+
 	h1 {
-		font-size: 2em;
+		font-size: 1.8em;
 	}
 }

@@ -126,7 +126,8 @@ footer {
 	margin: 150px auto 100px;
 	width: 60vw;
 	position: relative;
-	background-color: white;
+	/* background-color: white; */
+	
 }
 .container2 {
 	width: 92vw;

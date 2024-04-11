@@ -4,15 +4,53 @@
 
 .container {
 	margin: 0px auto;
-	width: 50vw;
+	width: 60vw;
 	position: relative;
+	padding-bottom: 100px;
 }
 
+/* Top navigation bar styles start here*/
+.container2 {
+	width: 92vw;
+	background-color: white;
+	margin: auto;
+}
+
+a {
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+	text-decoration: none;
+	color: rgba(0,0,0,.90);
+}
+nav {
+	width: 100vw;
+	background-color: white;
+	position: fixed;
+	top: 0px;
+	z-index: 1;
+	display: block;
+	margin: 0px auto;
+	padding: 30px 0px;
+}
+
+#logo {
+	padding: 0px;
+	
+	float: left;
+	color: orangered;
+	font-weight: bold;
+}
+
+#logo:hover {
+	color: black;
+}
+
+
 h1 {
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 120px;
+	padding-bottom: 20px;
 	text-align: left;
-	font-size: 2.5em;
+	font-size: 3em;
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 700;
@@ -23,27 +61,11 @@ h1 {
 
 h2 {
 	
-	color: rgba(0,0,0,.40);
-	font-size: 1.8em;
-	line-height: 1.6;
-	padding-top:30px;
-	padding-bottom: 15px;
-	font-family: "Inter", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 500;
-	font-style: normal;
-	font-variation-settings:
-    "slnt" 0;
-	text-align: left;
-	letter-spacing: -0.01em;
-	margin: 0;
-}
-h3 {
-	
 	color: rgba(0,0,0,.90);
-	font-size: 1.3em;
-	line-height: 1.6;
-	padding-bottom: 0px;
+	font-size: 2em;
+	line-height: 1.4;
+	padding-top:30px;
+	padding-bottom: 30px;
 	font-family: "Inter", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 550;
@@ -54,20 +76,32 @@ h3 {
 	letter-spacing: -0.01em;
 	margin: 0;
 }
+h3 {
+	color: rgba(0,0,0,.90);
+	font-size: 1.3em;
+	line-height: 1.4;
+	padding-bottom: 0px;
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 550;
+	font-style: normal;
+	font-variation-settings: "slnt" 0;
+	text-align: left;
+	letter-spacing: -0.01em;
+	margin: 0;
+}
 
 .devider {
 	padding-bottom: 0px;
 }
 
 p {	
-	
-
 	color: rgba(0,0,0,.90);
 	font-size: 1.3em;
-	line-height: 1.6;
-	letter-spacing: .01em;
-	font-family: bennet-display, sans-serif;
-	font-weight: 300;
+	line-height: 1.4;
+	/* letter-spacing: .01em; */
+	font-family: "Inter", sans-serif;
+	font-weight: 385;
 	font-style: normal;
 	padding-bottom: 15px;
 	margin: 0;
@@ -104,7 +138,7 @@ u {
 
 @media screen and (min-width: 1440px) {
 	.container {	
-		width: 50vw;
+		width: 60vw;
 	}
 		p {
 			font-size: 1.3em;
@@ -126,7 +160,7 @@ u {
 
 @media screen and (max-width: 700px) {
 	.container {	
-		width: 90vw;
+		width: 92vw;
 	}
 	p {
 		font-size: 1.3em;

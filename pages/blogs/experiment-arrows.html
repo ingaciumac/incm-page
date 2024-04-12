@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confetti Shapes</title>
+<style>
+  body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #191919;
+  }
+
+.shape {
+    position: absolute;
+    opacity: 1;
+    animation: float 5s infinite ease-in-out;
+    
+}
+
+  .shape1 {
+    position: absolute;
+    opacity: 1;
+    animation: float 8s infinite ease-in-out;
+}
+
+.shape2 {
+    position: absolute;
+    opacity: 1;
+    animation: float 10s infinite ease-in-out;
+}
+
+.shape3 {
+    position: absolute;
+    opacity: 1;
+    animation: float 6s infinite ease-in-out;
+}
+
+.shape4 {
+    position: absolute;
+    opacity: 1;
+    animation: float 4s infinite ease-in-out;
+}
+
+  @keyframes float {
+    0% { transform: translateY(0) translateX(0) rotate(0); }
+    25% { transform: translateY(-100px) translateX(100px) rotate(5deg); }
+    50% { transform: translateY(-200px) translateX(-100px) rotate(0deg); }
+    75% { transform: translateY(-100px) translateX(-200px) rotate(2deg); }
+    100% { transform: translateY(0) translateX(0) rotate(0); }
+  }
+  .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  .square {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  .red { background-color: orangered; }
+  .blue { background-color: blue; }
+
+
+  
+  .cursor-shape {
+    width: 40px;
+    height: 40px; 
+  }
+
+  .tooltip {
+    position: absolute;
+    top: 130%;
+    left: 60%; /* Position the tooltip to the right of the cursor */
+    transform: translateX(10px) translateY(-50%);
+    background-color: #ff88e1; /* A placeholder yellow color for the tooltip */
+    padding: 8px 16px;
+   /* border-radius: 2px;*/
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+
+
+
+<div class="shape cursor-shape" style="top:20%; left:15%;">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="26" viewBox="0 0 18 20" fill="none"><path d="M4.59118 20.4516L1.23813 1.13634L17.8695 11.6042L9.13161 12.983L4.59118 20.4516Z" fill="#FFC700" stroke="white"/></svg>
+<div class="tooltip" style="background-color: #FFC700">Me</div>
+</div>
+
+<div class="shape1 cursor-shape" style="top:50%; left:55%;">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="26" viewBox="0 0 18 20" fill="none"><path d="M4.59118 20.4516L1.23813 1.13634L17.8695 11.6042L9.13161 12.983L4.59118 20.4516Z" fill="#EF5533" stroke="white"/></svg>
+<div class="tooltip" style="background-color: #EF5533">Designer</div>
+</div>
+
+<div class="shape2 cursor-shape" style="top:60%; left:80%;">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="26" viewBox="0 0 18 20" fill="none"><path d="M4.59118 20.4516L1.23813 1.13634L17.8695 11.6042L9.13161 12.983L4.59118 20.4516Z" fill="#18A0FB" stroke="white"/></svg>
+<div class="tooltip" style="background-color: #18A0FB">Cappuccino</div>
+</div>
+
+<div class="shape3 cursor-shape" style="top:90%; left:40%;">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="26" viewBox="0 0 18 20" fill="none"><path d="M4.59118 20.4516L1.23813 1.13634L17.8695 11.6042L9.13161 12.983L4.59118 20.4516Z" fill="#EE46D3" stroke="white"/></svg>
+<div class="tooltip" style="background-color: #EE46D3">Sava</div>
+</div>
+
+<div class="shape4 cursor-shape" style="top:70%; left:10%;">
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="26" viewBox="0 0 18 20" fill="none"><path d="M4.59118 20.4516L1.23813 1.13634L17.8695 11.6042L9.13161 12.983L4.59118 20.4516Z" fill="#1BC47D" stroke="white"/></svg>
+	<div class="tooltip" style="background-color: #1BC47D">Stranger</div>
+	</div>
+
+
+</body>
+</html>

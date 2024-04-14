@@ -1,8 +1,14 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #191919;
+  }
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	font-family: 'Inter', Arial, Helvetica, sans-serif;
-	color: black;
+	color: rgb(231, 231, 231);
 	
 }
 
@@ -13,7 +19,7 @@ h1 {
 	font-weight: 650;
 	font-style: normal;
 	font-variation-settings:"slnt" 0;
-	color: rgba(0,0,0,.90);
+	color: rgb(231, 231, 231);
 	padding-bottom: 20px;
 }
 
@@ -25,7 +31,7 @@ p {
 	font-weight: 385;
 	font-style: normal;
 	font-variation-settings:"slnt" 0;
-	color: rgba(0,0,0,.90);
+	color: rgb(231, 231, 231);
 	padding-bottom: 20px;
 }
 
@@ -33,47 +39,47 @@ a {
 	font-family: 'Inter', sans-serif;
 	font-weight: 400;
 	text-decoration: none;
-	color: rgba(0,0,0,.90);
+	color: rgb(231, 231, 231);
 }
 
 .email {
 	font-family: 'Inter', sans-serif;
 	font-weight: 400;
 	text-decoration: none;
-	color: #0229d7;
+	color: #18A0FB;
 }
 
 .underline-ee-1 {
 	background-size: 1.5px 1em;
 	box-shadow:
-	inset 0 -0.15em #03868f;
+	inset 0 -0.08em #18A0FB;
 	display: inline;
 }
 .underline-ee-2 {
 	background-size: 1.5px 1em;
 	box-shadow:
-	inset 0 -0.15em #ebef01;
+	inset 0 -0.08em #18A0FB;
 	display: inline;
 }
 
 .underline-karma {
 	background-size: 1.5px 1em;
 	box-shadow:
-	inset 0 -0.15em #ff88e1;
+	inset 0 -0.08em #18A0FB;
 	display: inline;
 }
 
 .underline-behance {
 	background-size: 1.5px 1em;
 	box-shadow:
-	inset 0 -0.15em #0057ff;
+	inset 0 -0.08em #18A0FB;
 	display: inline;
 }
 
 .underline-linkedin {
 	background-size: 1.5px 1em;
 	box-shadow:
-	inset 0 -0.15em #0a66c2;
+	inset 0 -0.08em #18A0FB;
 	display: inline;
 }
 
@@ -131,11 +137,11 @@ footer {
 }
 .container2 {
 	width: 92vw;
-	background-color: white;
+	/* background-color: white; */
 	margin: auto;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
 	.container {
 		margin: 100px auto;
 		width: 80vw;
